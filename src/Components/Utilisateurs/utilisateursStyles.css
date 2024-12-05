@@ -1,0 +1,255 @@
+.utilisateur {
+    height: 100vh;/* Utilise la hauteur de la fenêtre */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Place les éléments les uns en dessous des autres */
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.utilisateur h1 {
+    text-align: center; /* Centrer le texte horizontalement */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+
+.boutons-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 20px 30px; /* Ajustez le padding selon vos besoins */
+    margin: 15px; /* Ajustez la marge selon vos besoins */
+    transition: transform 0.2s ease;
+}
+
+button:disabled {
+    opacity: 0.5; /* Diminue l'opacité du bouton */
+    cursor: not-allowed; /* Change le curseur pour indiquer qu'il est désactivé */
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur semi-transparente */
+    z-index: 999; /* Assure que la pop-up s'affiche au-dessus du contenu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    text-align: center; /* Pour centrer le contenu */
+}
+
+.popup p {
+    margin-bottom: 10px;
+}
+
+.popup button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+.creationButton {
+    background-color: #3FD632; /* Vert */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.creationButton:hover {
+    background-color: #37B925; /* Nuance plus sombre de vert au survol */
+    transform: scale(1.1);
+}
+
+.modificationButton {
+    background-color: #207AD6; /* Bleu */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modificationButton:hover {
+    background-color: #1A5DAB; /* Nuance plus sombre de bleu au survol */
+    transform: scale(1.1);
+}
+
+.suppressionButton {
+    background-color: #D63220; /* Rouge */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.suppressionButton:hover {
+    background-color: #C82E1C; /* Nuance plus sombre de rouge au survol */
+    transform: scale(1.1);
+}
+
+.operation-container {
+    height: 60vh;
+    width: 75vw;
+    margin-top: 1%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: box-shadow 0.3s ease; /* Transition pour l'ombre */
+    overflow-y: scroll;
+
+    /* Réactivité au survol */
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+    }
+}
+
+/* Barre de défilement */
+.operation-container::-webkit-scrollbar {
+    width: 10px; /* Largeur de la barre de défilement */
+}
+
+/* Piste de la barre de défilement */
+.operation-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur de fond de la piste */
+    border-radius: 5px; /* Coins arrondis de la piste */
+}
+
+/* Poignée de la barre de défilement */
+.operation-container::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur de la poignée de la barre de défilement */
+    border-radius: 5px; /* Coins arrondis de la poignée */
+}
+
+/* Au survol de la poignée de la barre de défilement */
+.operation-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la poignée au survol */
+}
+
+.operation-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Alignement des éléments en colonne par défaut */
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px; /* Ajout d'un petit espacement entre les champs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #207AD6;
+}
+
+.form-group input.invalid {
+    border-color: #ff0000; /* Couleur de la bordure rouge pour indiquer une entrée invalide */
+}
+
+.select-container {
+    position: relative;
+    width: 110%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.suppression-container{
+    width: 30%;
+}
+
+.select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f8f8;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.select-container select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.select-container select::placeholder {
+    color: #999;
+}
+
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select-arrow::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 4px 0 4px;
+    border-color: #666 transparent transparent transparent;
+}  
+
+.error-message {
+    margin-top: 5px;
+    color: #ff0000; /* Couleur rouge pour le message d'erreur */
+    font-size: 14px;
+}
+
+.operation-creation {
+    background-color: #D6F5D6;
+}
+
+.operation-modification{
+    background-color: #CCE0FF;
+}
+
+.operation-suppression{
+    background-color: #FFCCCC;
+}

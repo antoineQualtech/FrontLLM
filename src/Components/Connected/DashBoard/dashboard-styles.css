@@ -1,0 +1,137 @@
+/* Styles pour l'ensemble de l'application */
+.app-container {
+    display: flex;
+    flex-direction: row; /* Disposition en ligne pour aligner le dashboard à gauche et le contenu à droite */
+    height: 100vh;
+    font-family: 'Roboto', sans-serif; /* Assurez-vous d'avoir inclus la police Roboto */
+    overflow-y: hidden;
+}
+
+/* Styles pour le tableau de bord */
+.dashboard-container {
+    width: 15%; /* Largeur du dashboard */
+    height: 100%; /* Hauteur à 100% de la hauteur de la vue */
+   /* background: -webkit-linear-gradient(left, #e53935, #8a2f2d);*/
+    background: linear-gradient(to right, #e53935, #8a2f2d);
+    color: #fff; /* Couleur du texte */
+    z-index: 100; /* Assure que le dashboard est au-dessus du reste du contenu */
+    overflow-y: auto; /* Permet de scroller si le contenu est plus grand que la hauteur */
+    padding: 20px; /* Espacement intérieur */
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ajustement pour centrer le contenu verticallement */
+}
+
+.dashboard-container h2 {
+    color: white; /* Rouge */
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dashboard-container ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.dashboard-container li {
+    margin: 10px 0;
+}
+
+.dashboard-container a {
+   /* color: #fff; /* Couleur du texte des liens */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.dashboard-container a:hover {
+    background-color: #555; /* Couleur de fond au survol */
+}
+
+.logoutButton:hover {
+    background-color: #292929; /* Rouge plus foncé au survol */
+}
+
+/* Styles pour le contenu principal */
+.content-display {
+    flex: 1; /* Prend tout l'espace disponible restant */
+    background-color: #f0f0f0; /* Couleur de fond du contenu */
+}
+
+.content-display h2 {
+    color: #333; /* Couleur du texte */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.navigationDashboard {
+    display: block;
+    /*flex-direction: column;*/
+    align-items: center; /* Centrage horizontal */
+}
+
+.navLink {
+    color: #999;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigationDashboard > div {
+    margin-bottom: 10px;
+}
+
+.clickable{
+    display: flex;
+}
+
+.navLink:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, #c22927, #7e2927);
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.clickable:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, #c22927, #7e2927);
+}
+
+.active {
+    background: linear-gradient(to right, #c22927, #7e2927);
+}
+
+.userLogged-container {
+    text-align: center;
+    display: block;
+}
+
+.userLogged-container h2 {
+    font-size: x-large;
+    text-align: center !important;
+    
+}
+
+.user-logo{
+    width: 30%;
+    height: auto;
+}
+
+#logoHenkel{
+    width: 60%;
+    height: auto;
+}
+
+
+.logoContainer {
+    text-align: center;
+    margin-bottom: 2rem;
+}

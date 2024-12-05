@@ -1,0 +1,104 @@
+.permis-container {
+    height: 100%; /* Utilise 100% de la hauteur du parent */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Place les éléments les uns en dessous des autres */
+    justify-content: flex-start; /* Aligne les éléments au début */
+    align-items: center;
+    user-select: none;
+    padding-top: 1rem; /* Ajoute un petit padding en haut */
+    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+}
+
+h1 {
+    margin: 0; /* Supprime les marges par défaut */
+    text-align: center;
+    margin-top: 4rem; /* Ajoute une petite marge en haut */
+    margin-bottom: 4rem; /* Réduit la marge inférieure */
+}
+
+.listePermis-container {
+    width: 95%; /* Fixe la largeur */
+    height: 80%; /* Fixe la hauteur */
+    background-color: #f0f0f09a; /* Couleur de fond */
+    overflow-y: scroll; /* Défilement vertical */
+    padding: 1rem; /* Ajoute un peu de padding pour l'intérieur du conteneur */
+    border-radius: 8px; /* Ajoute des coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
+    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+    border: solid 15px #ada6a64b;
+}
+
+.permis-object {
+    margin-bottom: 1rem; /* Ajoute une petite marge en bas pour espacer les objets */
+    background-color: #ffffff; /* Fond blanc pour les objets */
+    padding: 1rem; /* Padding interne */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.permis-header, .permis-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.permis-body{
+    margin-top: 1rem;
+}
+
+.permis-header div, .permis-body div {
+    flex: 1 1 calc(50% - 1rem); /* Flex-grow, flex-shrink, flex-basis */
+}
+
+@media (max-width: 768px) {
+    .permis-header div, .permis-body div {
+        flex: 1 1 100%;
+    }
+}
+
+/* Barre de défilement */
+.listePermis-container::-webkit-scrollbar {
+    width: 10px; /* Largeur de la barre de défilement */
+}
+
+/* Piste de la barre de défilement */
+.listePermis-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur de fond de la piste */
+    border-radius: 5px; /* Coins arrondis de la piste */
+}
+
+/* Poignée de la barre de défilement */
+.listePermis-container::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur de la poignée de la barre de défilement */
+    border-radius: 5px; /* Coins arrondis de la poignée */
+}
+
+/* Au survol de la poignée de la barre de défilement */
+.listePermis-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la poignée au survol */
+}
+
+.boutonAfficherContenu {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Assure que le padding et les bordures sont inclus dans la taille du bouton */
+    display: inline-block; /* Fixe la taille du bouton */
+}
+
+.boutonAfficherContenu:hover {
+    background-color: #0056b3;
+    box-sizing: border-box; /* Assure que le padding et les bordures sont inclus dans la taille du bouton */
+    display: inline-block; /* Fixe la taille du bouton */
+}

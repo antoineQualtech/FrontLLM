@@ -1,0 +1,20 @@
+.accueil-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+    height: 100vh; /* Hauteur à 100% de la hauteur de la vue */
+    font-family: 'Roboto', sans-serif; /* Assurez-vous d'avoir inclus la police Roboto */
+}
+
+.accueil-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.accueil-container p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}

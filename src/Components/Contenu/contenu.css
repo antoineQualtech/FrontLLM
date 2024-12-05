@@ -1,0 +1,68 @@
+.permis-object {
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .permis-header, .permis-body {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .permis-header div, .permis-body div {
+    flex: 1 1 30%;
+  }
+  
+  .boutonAfficherContenu {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  
+  .boutonAfficherContenu:hover {
+    background-color: #0056b3;
+  }
+  
+  .contenu-object {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contenu-section {
+    margin-bottom: 1rem;
+  }
+  
+  .contenu-section strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #c22927;
+  }
+  
+  .info-urgence {
+    background-color: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-urgence div {
+    margin-bottom: 0.25rem;
+  }
+  
